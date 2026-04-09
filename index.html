@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Study Planner with GPA Goal</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>📘 Study Planner with GPA Goal</h1>
+
+<div class="container">
+
+   
+    <div class="card">
+        <h2>Enter Details</h2>
+
+        <label>Current GPA:</label>
+        <input type="number" id="currentGPA" step="0.01">
+
+        <label>Target GPA:</label>
+        <input type="number" id="targetGPA" step="0.01">
+
+        <button onclick="addSubject()">+ Add Subject</button>
+
+        <table id="subjectsTable">
+            <tr>
+                <th>Subject</th>
+                <th>Credit</th>
+                <th>Confidence (1-5)</th>
+            </tr>
+        </table>
+
+        <button onclick="calculate()">Generate Plan & Timetable</button>
+    </div>
+
+    
+    <div class="card">
+        <h2>📊 Focus Plan</h2>
+        <p id="result"></p>
+
+        <canvas id="chart"></canvas>
+
+        <h2>🗓 Weekly Timetable</h2>
+        <div id="timetable" class="timetable"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
